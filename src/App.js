@@ -27,4 +27,4 @@ function App() {
 export default App;
 
 a = 123;
-console(log) = a;
+console.log(a);
