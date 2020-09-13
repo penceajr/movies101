@@ -1,0 +1,33 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+    opacity: 1
+}
+
+.background-image{
+    height: 100%;
+    width: 100%;
+}
+
+.Login-container{
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* .background-image{
+    height: 100%;
+    width: 100%;
+    background-image: url('../Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    opacity: 0.3;
+  } */
+
+.Login-container{
+    position: relative;
+}
