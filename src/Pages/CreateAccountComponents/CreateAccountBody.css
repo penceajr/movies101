@@ -1,0 +1,28 @@
+.CreateAccountBody{
+    display: flex;
+    margin: auto;
+    width: 600px;
+    padding: 10px;;
+  
+  }
+  
+  .pop-suc{
+      width: 20%;
+      justify-content: center;
+      overflow: auto;
+      margin: 0;
+      position: fixed;
+      top: 50%;
+      left: 30%;
+      transform: translate(0, -50%) 
+  }
+  
+  .Inputs-Container{
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%) 
+  }
+  
+  
+  
