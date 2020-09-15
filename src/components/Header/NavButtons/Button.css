@@ -1,0 +1,10 @@
+.nav-button {
+    /* display: flex;
+    margin-left: auto; */
+    /* margin-left: 750px; */
+    float: right;
+    border-radius: 5px;
+    outline: none;
+    /* display: flex;
+    justify-content: flex-end; */
+}
