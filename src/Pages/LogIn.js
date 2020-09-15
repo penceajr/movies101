@@ -5,11 +5,12 @@ import { Header } from "../components/Header/Header";
 import { LogInBody } from "./LoginPageComponents/LogInBody";
 
 
-export function LogIn() {
+export function LogIn(props) {
     return (
     <div className="background-image">
-    <div className="Login-container">
+    
         <Header />
+    <div className="Login-container">   
         <LogInBody />
     </div>
     </div>
