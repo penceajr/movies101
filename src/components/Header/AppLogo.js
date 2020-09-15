@@ -7,6 +7,6 @@ import "./AppLogo.css";
 
 export function AppLogo() {
   return( <Link to="/">
-         <img src={Movie101} alt="logo" className="movie-logo" />;
+         <img src={Movie101} alt="logo" className="movie-logo" />
          </Link>)
 }
