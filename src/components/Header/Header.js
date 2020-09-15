@@ -5,6 +5,7 @@ import { AppLogo } from "./AppLogo";
 import "./Header.css";
 import { MovieDetails } from "./MovieDetails";
 import { MovieSearch }  from "./MovieSearch";
+import { NavButtons } from "./NavButtons/NavButtons";
 
 
 export function Header() {
@@ -12,5 +13,6 @@ export function Header() {
         <AppLogo />
         <MovieDetails />
         <MovieSearch />
+        <NavButtons />
     </div>
 }
