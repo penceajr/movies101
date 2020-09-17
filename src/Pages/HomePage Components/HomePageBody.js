@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./HomePageBody.css";
 import { MovieCard } from "./MovieCard/MovieCard";
 
@@ -11,12 +10,29 @@ export class HomePagebody extends React.Component{
     }
      
     getAllMovies = () => {
-        fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999&skip=0")
+        if(localStorage.getItem("AllMovies")){
+            
+         let results = JSON.parse(localStorage.getItem("AllMovies"))
+            const BestRatedMovies = results
+            .filter(movie => movie.imdbRating > 8.4)
+            .sort(function(firstMovie, NextMovie){
+                return NextMovie.imdbRating - firstMovie.imdbRating
+            })
+            
+                this.setState({
+                TopRatedMovie: BestRatedMovies[0],
+                BestRatedMovies: BestRatedMovies.slice(1)
+                 
+            })  
+           }  
+           else{
+         fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999&skip=0")
           .then((res) => res.json())
           .then((json) => {
             
-           if(false){}
-           else{ 
+           
+            
+            console.log(json.results);
             this.setState({
                 BestRatedMovies: json.results
                .filter(movie => movie.imdbRating > 8.4)
@@ -25,6 +41,8 @@ export class HomePagebody extends React.Component{
                  
             })
             
+            localStorage.setItem("AllMovies", JSON.stringify(json.results))
+
             this.setState({
                 TopRatedMovie: this.state.BestRatedMovies[0],
                 
@@ -35,9 +53,10 @@ export class HomePagebody extends React.Component{
             this.setState({
                 BestRatedMovies: this.state.BestRatedMovies
             })
-            
-        }
+           
+        
           });
+        }
       };
 
 componentDidMount(){
