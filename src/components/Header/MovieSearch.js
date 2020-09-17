@@ -8,4 +8,4 @@ export function MovieSearch() {
     return ( <Link to = "/MovieSearch"> 
         <img src={Search} alt ="search" className="search-logo" />
         </Link>)
-}
+};

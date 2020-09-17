@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Search from "/src/Search.png";
-import "/components/MovieSearch.css";
+// import Search from "../Search.png";
 import "./SearchMoviePage.css";
+import { MovieSearch } from "../components/Header/MovieSearch"
 
 export function SearchMoviePage(props) {
     return(

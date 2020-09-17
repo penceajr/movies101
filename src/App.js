@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { CreateAccount } from "./Pages/CreateAccount"
 import { Header } from "./components/Header/Header";
+import { SearchMoviePage } from "./Pages/SearchMoviePage";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/create-account">
               <CreateAccount />
+            </Route>
+            <Route path="/MovieSearch">
+              <SearchMoviePage />
             </Route>
           </Switch>
         
