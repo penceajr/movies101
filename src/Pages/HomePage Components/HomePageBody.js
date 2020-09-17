@@ -45,7 +45,7 @@ export class HomePagebody extends React.Component{
 
             this.setState({
                 TopRatedMovie: this.state.BestRatedMovies[0],
-                
+
             })
 
             this.state.BestRatedMovies.shift()
@@ -66,7 +66,7 @@ componentDidMount(){
     
     render(){
         return (
-           <div className="HomePageBody"> 
+        <div className="HomePageBody"> 
             <div className="top-rated-movies">
                 <h2>TOP RATED MOVIES</h2>
                 <MovieCard 
