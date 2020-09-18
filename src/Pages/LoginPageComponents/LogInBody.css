@@ -1,4 +1,9 @@
 .LogInBody{
+  height: 100%;
+  width: 100%;
+}
+
+.LogInBody{
   display: flex;
   margin: auto;
   width: 600px;
@@ -20,8 +25,29 @@
 .Inputs-Container{
   margin: 0;
   position: fixed;
+  left: 40%;
   top: 50%;
   transform: translate(0, -50%) 
 }
 
 
+.buttons-container{
+  right: 0;
+  bottom: 0;
+  display: table;
+  margin-left: auto;
+}
+
+div.log-in-button button{
+  margin-right: 50px;
+  width: 100px;
+  height: 40px;
+  vertical-align: text-bottom;
+}
+
+div.create-account-button button{
+  margin-right: 100px;
+  width: 150px;
+  height: 40px;
+  vertical-align: text-bottom;
+}

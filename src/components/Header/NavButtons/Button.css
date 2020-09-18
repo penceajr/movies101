@@ -3,3 +3,17 @@
     outline: none;
     margin-right: 10px;
 }
+
+.log-in-button button{
+    margin-right: 50px;
+    width: 100px;
+    height: 40px;
+    vertical-align: text-bottom
+  }
+  
+.create-account-button button{
+    margin-right: 100px;
+    width: 150px;
+    height: 40px;
+    vertical-align: text-bottom;
+  }

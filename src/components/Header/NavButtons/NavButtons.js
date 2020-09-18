@@ -6,7 +6,7 @@ export function NavButtons() {
     return (
     <div className="navigation-buttons">
      <Link to="/login">
-        <Button label="SIGN IN" /> 
+        <Button className="nav-button" label="SIGN IN" /> 
     </Link>
     </div>
     );

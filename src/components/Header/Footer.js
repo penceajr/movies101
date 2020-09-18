@@ -1,11 +1,10 @@
 import React from "react";
-
-import facebook from "../HomePage Components/facebook.png";
-import instagram from "../HomePage Components/instagram.png";
-import twitter from "../HomePage Components/twitter.png";
-import gmail from "../HomePage Components/gmail.png";
-import whatsapp from "../HomePage Components/whatsapp.png";
-import pinterest from "../HomePage Components/pinterest.png";
+import facebook from "../../Pages/HomePage Components/facebook.png";
+import instagram from "../../Pages/HomePage Components/instagram.png";
+import twitter from "../../Pages/HomePage Components/twitter.png";
+import gmail from "../../Pages/HomePage Components/gmail.png";
+import whatsapp from "../../Pages/HomePage Components/whatsapp.png";
+import pinterest from "../../Pages/HomePage Components/pinterest.png";
 import "./Footer.css";
 
 export function Footer() {
