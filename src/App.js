@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import { CreateAccount } from "./Pages/CreateAccount"
 import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Header/Footer";
+
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
               <CreateAccount />
             </Route>
           </Switch>
-        
+        <Footer />
       </div>
     </Router>
   );
