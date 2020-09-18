@@ -68,7 +68,7 @@ componentDidMount(){
         return (
         <div className="HomePageBody"> 
             <div className="top-rated-movies">
-                <h2>TOP RATED MOVIES</h2>
+                <h2 className="rated-movie">TOP RATED MOVIES</h2>
                 <MovieCard 
                     Title={this.state.TopRatedMovie.Title}
                     imdbRating={this.state.TopRatedMovie.imdbRating}
