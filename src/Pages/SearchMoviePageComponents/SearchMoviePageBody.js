@@ -4,7 +4,7 @@ import { InputBar } from "./Inputs"
 
 export function SearchMoviePageBody (props) {
     return (
-        <div className="SearchMovieBody">
+        <div className="SearchMoviePageBody">
             <h2>Search a movie by:</h2>
             <div className="Inputs-Container">
                 <InputBar label="Title" type="text" placeholder="title"/>
