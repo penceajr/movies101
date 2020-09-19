@@ -1,52 +1,47 @@
 .CreateAccountBody{
   height: 100%;
   width: 100%;
+  display: flex;
 }
 
-.CreateAccountBody{
-    display: flex;
-    margin: auto;
-    width: 600px;
-    padding: 10px;;
+.pop-suc{
+    margin-top: 230px;
+    width: 400px;
+    height: 450px;
+    margin-left: 600px;
+}
+
+.Inputs-Container{
+  margin-top: 340px;
+  margin-left: 50px;
   
-  }
-  
-  .pop-suc{
-      width: 20%;
-      justify-content: center;
-      overflow: auto;
-      margin: 0;
-      position: fixed;
-      top: 50%;
-      left: 30%;
-      transform: translate(0, -50%) 
-  }
-  
-  .Inputs-Container{
-    margin: 0;
-    position: fixed;
-    top: 50%;
-    transform: translate(0, -50%) 
-  }
-  
-  .buttons-container{
-    right: 0;
-    bottom: 0;
-    display: table;
-    margin-left: auto;
-  }
-  
-  div.log-in-button button{
-    margin-right: 50px;
-    width: 100px;
-    height: 40px;
-    vertical-align: text-bottom;
-  }
-  
-  div.create-account-button button{
-    margin-right: 100px;
-    width: 150px;
-    height: 40px;
-    vertical-align: text-bottom;
-  }
-  
+}
+
+.createAccount-label{
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.createAccount-input{
+  width: 200px;
+  height: 30px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.create-account-button-container{
+  margin: 40px;
+  margin-left: 100px;
+}
+
+.createAccountButton{
+  margin-right: 30px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
