@@ -8,9 +8,9 @@ export function InputBar(props){
  return( 
   <div className="input-Container"> 
         <label 
-            className="input-container-label">{props.label}: </label>
+            className={props.LabelcssClass}>{props.label}: </label>
         <input 
-            className="input-container-input" 
+            className={props.InputcssClass} 
             label={props.label} 
             type={props.type} 
             placeholder={props.placeholder}

@@ -1,53 +1,45 @@
 .LogInBody{
   height: 100%;
   width: 100%;
-}
-
-.LogInBody{
   display: flex;
-  margin: auto;
-  width: 600px;
-  padding: 10px;;
-
 }
 
 .movie-glasses{
-    width: 20%;
-    justify-content: center;
-    overflow: auto;
-    margin: 0;
-    position: fixed;
-    top: 50%;
-    left: 30%;
-    transform: translate(0, -50%) 
+    width: 400px;
+    margin-left: 600px;
+    margin-bottom: 100px;
 }
 
 .Inputs-Container{
-  margin: 0;
-  position: fixed;
-  left: 40%;
-  top: 50%;
-  transform: translate(0, -50%) 
+  margin-top: 340px;
+  margin-left: 50px;
 }
 
+.input-container-label{
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.input-container-input{
+  width: 200px;
+  height: 30px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 .buttons-container{
-  right: 0;
-  bottom: 0;
-  display: table;
-  margin-left: auto;
+  margin: 40px;
 }
 
-div.log-in-button button{
-  margin-right: 50px;
-  width: 100px;
-  height: 40px;
-  vertical-align: text-bottom;
-}
-
-div.create-account-button button{
-  margin-right: 100px;
+.create-account-button,
+.log-in-button{
+  margin-right: 30px;
   width: 150px;
   height: 40px;
-  vertical-align: text-bottom;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }

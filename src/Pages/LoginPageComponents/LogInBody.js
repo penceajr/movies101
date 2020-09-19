@@ -48,7 +48,9 @@ export class LogInBody extends React.Component{
               <div className="Inputs-Container">
                 <InputBar 
                   label="UserName" 
-                  type="text" 
+                  type="text"
+                  InputcssClass="input-container-input" 
+                  LabelcssClass="input-container-label"
                   placeholder="Type your username" 
                   value={this.state.value}
                   onChangeValue={this.handleChangeUsername}
@@ -57,6 +59,8 @@ export class LogInBody extends React.Component{
                 <InputBar 
                   label="Password" 
                   type="password" 
+                  InputcssClass="input-container-input"
+                  LabelcssClass="input-container-label"
                   placeholder="Type your password"
                   value={this.state.value}
                   onChangeValue={this.handleChangePassword} 
@@ -64,9 +68,9 @@ export class LogInBody extends React.Component{
                 
                 <div className="buttons-container">  
                 <Link to="/create-account">
-                    <Button className="create-account-button" label="Create Account"/>
+                    <Button cssClass="create-account-button" label="Create Account"/>
                 </Link>    
-                    <Button className="log-in-button" label="Log In" onSubmit={this.handleLogIn}/>   
+                    <Button cssClass="log-in-button" label="Log In" onSubmit={this.handleLogIn}/>   
                      
                 </div>
               </div>   

@@ -57,7 +57,9 @@ handleCreateAccount = ()=> {
             <div className="CreateAccountBody" >
                 <img src={PopSuc} alt="popsuc" className="pop-suc"></img>
                 <div className="Inputs-Container">
-                <InputBar 
+                <InputBar
+                  LabelcssClass="createAccount-label"
+                  InputcssClass="createAccount-input" 
                   label="UserName" 
                   type="text" 
                   placeholder="Type your username" 
@@ -66,6 +68,8 @@ handleCreateAccount = ()=> {
                   />
                 
                 <InputBar 
+                  LabelcssClass="createAccount-label"
+                  InputcssClass="createAccount-input"
                   label="Password" 
                   type="password" 
                   placeholder="Type your password"
@@ -74,6 +78,8 @@ handleCreateAccount = ()=> {
                   />
 
                 <InputBar 
+                  LabelcssClass="createAccount-label"
+                  InputcssClass="createAccount-input"
                   label="Retype Password" 
                   type="password" 
                   placeholder="Please retype your password"
@@ -81,9 +87,9 @@ handleCreateAccount = ()=> {
                   onChangeValue={this.handleChangeRetypePassword} 
                   />
                 
-                <div className="buttons-container">  
+                <div className="create-account-button-container">  
                     <Button 
-                      className="create-account-button" 
+                      cssClass="createAccountButton" 
                       label="Create Account"
                       onSubmit={this.handleCreateAccount}  
                       />                    
