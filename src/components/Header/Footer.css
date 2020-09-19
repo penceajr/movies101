@@ -1,0 +1,35 @@
+.footer {
+    margin-top: auto;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(128, 125, 117);
+    border-radius: 15px;
+    margin: 10px 10px 10px 10px;
+    
+}
+
+.facebook-contact,
+.instagram-contact,
+.twitter-contact,
+.gmail-contact,
+.whatsapp-contact,
+.pinterest-contact{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    
+}
+
+.left-footer {
+    display: flex;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.right-footer {
+    margin-bottom: 0;
+}

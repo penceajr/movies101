@@ -10,6 +10,8 @@ import {
 import { CreateAccount } from "./Pages/CreateAccount"
 import { Header } from "./components/Header/Header";
 import { SearchMoviePage } from "./Pages/SearchMoviePage";
+import { Footer } from "./components/Header/Footer";
+
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
               <SearchMoviePage />
             </Route>
           </Switch>
-        
+        <Footer />
       </div>
     </Router>
   );
