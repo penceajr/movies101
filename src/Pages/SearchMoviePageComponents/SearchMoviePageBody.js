@@ -2,9 +2,29 @@ import React from "react"
 import "./SearchMoviePageBody.css"
 import { InputBar } from "../../components/Header/Input"
 import { Button } from "../../components/Header/NavButtons/Button"
+import { render } from "@testing-library/react"
+import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 
-export function SearchMoviePageBody (props) {
-    return (
+export class SearchMoviePageBody extends React.Component {
+
+    state ={
+        AllMovies: {}
+    }
+
+        getAllMovies = () => {
+            
+                     fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999&skip=0")
+                    .then((res) => res.json())
+                    .then((json) => {
+
+                        console.log(json);
+                    });
+                };
+
+   
+                
+render() {
+     return (
         <div className="SearchMoviePageBody">
             <h2>Search a movie by:</h2>
             <div className="searchPage-Inputs-Container">
@@ -19,12 +39,27 @@ export function SearchMoviePageBody (props) {
                 <InputBar LabelcssClass="search-label" InputcssClass="search-input" label="Type" type="text" placeholder="Type"/>
             </div>
             <Button cssClass="searchMoviePage-button" label="Search"/>
-            <h2>Recommended movies:</h2>
-            <div className="Recommended-Movies-Container">
-                {/* Recommended movies */}
+
+            
+            
+            <h2>All movies:</h2>
+            
+           <div className="All-Movies-Container">
+            {this.state.AllMovies.map((element, index)=>{
+                return(
+                <MovieCard
+                id={element._id}
+                key={index}
+                Title={element.Title}
+                imdbRating={element.imdbRating}
+                Poster={element.Poster}
+                />)
+            })}
+                
                 
             </div>
         </div>
         
     );
-}
+     }
+    }
