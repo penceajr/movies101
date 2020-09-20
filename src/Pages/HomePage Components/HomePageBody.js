@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./HomePageBody.css";
-import { MovieCard } from "./MovieCard/MovieCard";
+import  MovieCard  from "./MovieCard/MovieCard";
 
 export class HomePagebody extends React.Component{
 
-    state ={ 
+state ={ 
         BestRatedMovies: [],
         TopRatedMovie: {}
     }
@@ -70,23 +69,27 @@ componentDidMount(){
         <div className="HomePageBody"> 
             <div className="top-rated-movies">
                 <h2 className="rated-movie">TOP RATED MOVIES</h2>
-                <Link to="MovieDetails">
+                
                 <MovieCard 
+                    id={this.state.TopRatedMovie._id}
                     Title={this.state.TopRatedMovie.Title}
                     imdbRating={this.state.TopRatedMovie.imdbRating}
                     Poster={this.state.TopRatedMovie.Poster}
                 />
-                </Link>
+             
             </div>     
         
             <div className="best-movies">
               {this.state.BestRatedMovies.map((element, index)=>(
+                
                   <MovieCard 
+                    id={element._id}
                     key={index}
                     Title={element.Title}
                     imdbRating={element.imdbRating}
                     Poster={element.Poster}
                   />
+                  
                   ))}
                 
 

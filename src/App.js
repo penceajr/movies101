@@ -32,9 +32,7 @@ function App() {
             <Route path="/MovieSearch">
               <SearchMoviePage />
             </Route>
-            <Route path="/MovieDetails">
-              <MovieDetailsPage />
-            </Route>
+            <Route component={MovieDetailsPage} path="/MovieDetails"/>
           </Switch>
         <Footer />
       </div>

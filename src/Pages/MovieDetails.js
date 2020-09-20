@@ -5,11 +5,15 @@ import "./MovieDetails.css"
 
 export class MovieDetailsPage extends React.Component {
     state = {
-          UserState: false,
+          UserState: false
         }   
 
 componentDidMount(){
-    this.handleUserState()    
+    this.handleUserState()
+    console.log(this.props.location);
+    const [search,id] = this.props.location.search.split("=");  
+    console.log(this.props.location);
+    console.log(search, id)   
 }
 
 handleUserState = () =>{
