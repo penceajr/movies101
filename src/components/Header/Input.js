@@ -12,7 +12,7 @@ export function InputBar(props){
         <input 
             className={props.InputcssClass} 
             label={props.label} 
-            type={props.type} 
+            type={props.type}  
             placeholder={props.placeholder}
             value={props.value}
             onChange={props.onChangeValue}>

@@ -12,7 +12,7 @@ import { Header } from "./components/Header/Header";
 import { SearchMoviePage } from "./Pages/SearchMoviePage";
 import { Footer } from "./components/Header/Footer";
 import { MovieDetailsPage } from "./Pages/MovieDetails";
-
+import {AddMoviePage} from "./Pages/AddMoviePage";
 
 function App() {
   return (
@@ -34,6 +34,9 @@ function App() {
             </Route>
             <Route path="/MovieDetails">
               <MovieDetailsPage />
+            </Route>
+            <Route path ="/AddMovie">
+              <AddMoviePage />
             </Route>
           </Switch>
         <Footer />
