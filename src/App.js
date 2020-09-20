@@ -11,6 +11,7 @@ import { CreateAccount } from "./Pages/CreateAccount"
 import { Header } from "./components/Header/Header";
 import { SearchMoviePage } from "./Pages/SearchMoviePage";
 import { Footer } from "./components/Header/Footer";
+import { MovieDetailsPage } from "./Pages/MovieDetails";
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/MovieSearch">
               <SearchMoviePage />
+            </Route>
+            <Route path="/MovieDetails">
+              <MovieDetailsPage />
             </Route>
           </Switch>
         <Footer />

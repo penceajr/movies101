@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HomePageBody.css";
 import { MovieCard } from "./MovieCard/MovieCard";
 
@@ -69,11 +70,13 @@ componentDidMount(){
         <div className="HomePageBody"> 
             <div className="top-rated-movies">
                 <h2 className="rated-movie">TOP RATED MOVIES</h2>
+                <Link to="MovieDetails">
                 <MovieCard 
                     Title={this.state.TopRatedMovie.Title}
                     imdbRating={this.state.TopRatedMovie.imdbRating}
                     Poster={this.state.TopRatedMovie.Poster}
                 />
+                </Link>
             </div>     
         
             <div className="best-movies">
