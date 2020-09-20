@@ -16,7 +16,6 @@ export function InputBar(props){
             placeholder={props.placeholder}
             value={props.value}
             onChange={props.onChangeValue}>
-
         </input>
     </div>
     )

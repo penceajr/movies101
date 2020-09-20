@@ -1,11 +1,17 @@
-.App {
+.App,
+body,
+html {
   width: 100%;
   height: 100%;
-}
-
-body {
   background-image: url("Background-opaque2.jpg");
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover; 
+}
+
+.HomePageBody{
+  background-image: url("Background-opaque2.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; 
  }

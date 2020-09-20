@@ -1,0 +1,40 @@
+.SearchMoviePageBody{
+    height: 100%;
+    width: 100%;
+}
+
+.searchPage-Inputs-Container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-Container{
+    display: flex;
+    align-items: center;
+} 
+
+.search-input,
+.search-label{
+    width: fit-content;
+    margin: 10px;
+}
+
+.search-label{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.search-input{
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
+
+.searchMoviePage-button{
+    margin-right: 30px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
