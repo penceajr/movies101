@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 export class LogInBody extends React.Component{
    state = {
-      username: '',
+      username: '', 
       password:''
     };
   
@@ -46,7 +46,7 @@ export class LogInBody extends React.Component{
             <div className="LogInBody" >
               <img src={movieGlasses} alt="glasses" className="movie-glasses"></img>
               <div className="Inputs-Container">
-                <InputBar 
+                <InputBar  
                   label="UserName" 
                   type="text"
                   InputcssClass="input-container-input" 
