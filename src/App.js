@@ -38,6 +38,7 @@ function App() {
             <Route path ="/AddMovie">
               <AddMoviePage />
             </Route>
+            <Route component={MovieDetailsPage} path="/MovieDetails"/>
           </Switch>
         <Footer />
       </div>
