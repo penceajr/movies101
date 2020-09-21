@@ -8,12 +8,13 @@ import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 export class SearchMoviePageBody extends React.Component {
 
     state ={
-        AllMovies: {}
+        movies: [],
+        
     }
 
         getAllMovies = () => {
             
-                     fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999&skip=0")
+                     fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999")
                     .then((res) => res.json())
                     .then((json) => {
 
@@ -44,8 +45,8 @@ render() {
             
             <h2>All movies:</h2>
             
-           <div className="All-Movies-Container">
-            {this.state.AllMovies.map((element, index)=>{
+           <div className="Movie-Found-Container">
+            {this.state.MovieFound.map((element, index)=>{
                 return(
                 <MovieCard
                 id={element._id}
