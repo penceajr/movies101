@@ -1,11 +1,9 @@
-
 import React from "react";
 import camera from "./camera.png";
-
 import "./AddMoviePageBody.css";
 import { InputBar } from "../../components/Header/Input";
 import { Button } from "../../components/Header/NavButtons/Button";
-import { MovieCard } from "../HomePage Components/MovieCard/MovieCard";
+import MovieCard from "../HomePage Components/MovieCard/MovieCard";
 
 export class AddMoviePageBody extends React.Component {
 
