@@ -10,10 +10,9 @@ export class MovieDetailsPage extends React.Component {
 
 componentDidMount(){
     this.handleUserState()
-    console.log(this.props.location);
-    const [search,id] = this.props.location.search.split("=");  
-    console.log(this.props.location);
-    console.log(search, id)   
+    console.log(this.props);
+    const [search ,id ] = this.props.location.search.split("=");  
+    console.log(this.props.location);  
 }
 
 handleUserState = () =>{

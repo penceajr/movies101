@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./AddMoviePage.css";
 import { AddMoviePageBody } from "./AddMoviePageComponents/AddMoviePageBody";
 

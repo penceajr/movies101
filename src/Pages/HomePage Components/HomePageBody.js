@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePageBody.css";
-import  MovieCard  from "./MovieCard/MovieCard";
+import MovieCard from "./MovieCard/MovieCard";
 
 export class HomePagebody extends React.Component{
 
