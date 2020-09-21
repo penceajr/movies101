@@ -2,7 +2,7 @@ import React from "react"
 import "./SearchMoviePageBody.css"
 import { InputBar } from "../../components/Header/Input"
 import { Button } from "../../components/Header/NavButtons/Button"
-import  render from "@testing-library/react"
+// import  {render} from "@testing-library/react"
 import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 
 export class SearchMoviePageBody extends React.Component {
