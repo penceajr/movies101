@@ -5,8 +5,10 @@ import star from "./star.png"
 
 class MovieCard extends React.Component {
 
-    handleOnClick = () => {
+handleOnClick = () => {
+        
         this.props.history.push(`/MovieDetails?movieId=${this.props.id}`)
+        
 }
    
    

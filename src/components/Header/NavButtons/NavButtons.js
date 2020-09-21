@@ -15,6 +15,7 @@ handleLogOut = ()=>{
       .then((res) => res.json())
       .then(() => {
         localStorage.removeItem("accessToken")
+        window.location.reload()
       }).catch(json => {
           if (json.message === "User logged out successfully" ) {
           }else {
@@ -37,7 +38,7 @@ checkIfUserLoggedIn = () => {
     } else {
         return(
           <div className="navigation-buttons">
-            <button cssClass="LogOut-button" onClick={this.handleLogOut}>Log Out</button>
+            <button className="LogOut-button" onClick={this.handleLogOut}>Log Out</button>
             </div>
         )
     }
