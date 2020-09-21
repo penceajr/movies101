@@ -7,6 +7,7 @@ import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 
 export class SearchMoviePageBody extends React.Component {
         state = {
+            FoundMovie: [],
             Title:"",
             Year:"",
             Genre:"",
@@ -30,39 +31,42 @@ export class SearchMoviePageBody extends React.Component {
 
     handleSearchMovieBy = () => {
         console.log("search movie by");
-        fetch("https://movies-app-siit.herokuapp.com/movies", {
+        fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999", {
         method: "GET",
         mode: "cors",
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
         },
-        body:JSON.stringify({
-            Title: this.state.Title,
-            Year: this.state.Year,
-            Genre: this.state.Genre,
-            Country: this.state.Country,
-            Language: this.state.Language,
-            ImdbRating: this.state.imdbRating,
-            Runtime: this.state.Runtime,
-            ImdbVotes: this.state.imdbVotes,
-            Type: this.state.Type,
-        }),
+        // body:JSON.stringify({
+        //     Title: this.state.Title,
+        //     Year: this.state.Year,
+        //     Genre: this.state.Genre,
+        //     Country: this.state.Country,
+        //     Language: this.state.Language,
+        //     ImdbRating: this.state.imdbRating,
+        //     Runtime: this.state.Runtime,
+        //     ImdbVotes: this.state.imdbVotes,
+        //     Type: this.state.Type,
+        // }),
     })
           .then((res) => res.json())
           .then((json) => {
             console.log(json);
-            if (json.message === "An invalid regular expression was supplied"){
-                alert ("The movie is not on a searchable field")
-            }else{
-                window.location.reload();
-            }
+            // if (json.message === "An invalid regular expression was supplied"){
+            //     alert ("The movie is not on a searchable field")
+            // }else{
+            //     window.location.reload();
+            // }
           });
       };
    
-                
+      componentDidMount() {
+          this.handleSearchMovieBy();
+      }     
+      
     render() {
-     return (
+    return ( 
         <div className="SearchMoviePageBody">
             <h2>Search a movie by:</h2>
             <div className="searchPage-Inputs-Container">
@@ -170,7 +174,16 @@ export class SearchMoviePageBody extends React.Component {
             <h2>All movies:</h2>
             
            <div className="Movie-Found-Container">
-                <MovieCard />    
+            {this.state.FoundMovie.map((element, index) => (
+                <MovieCard 
+                    id={element._id}
+                    key={index}
+                    Title={element.Title}
+                    imdbRating={element.imdbRating}
+                    Poster={element.Poster}
+                />    
+            ))
+            }
             </div>
         </div>
         
