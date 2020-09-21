@@ -43,8 +43,8 @@ handleUserState = () =>{
                 <InputBar 
                 LabelcssClass="MovieInformationContainer-label" 
                 InputcssClass={"MovieInformationContainer-input" + (this.state.UserState ? " show" : " hidden")} 
-                label="Image URL" type="text" placeholder="Image URL"/>
-                <InputBar 
+                label="ImageURL" type="text" placeholder="ImageURL"/>
+                <InputBar  
                 LabelcssClass="MovieInformationContainer-label" 
                 InputcssClass={"MovieInformationContainer-input" + (this.state.UserState ? " show" : " hidden")} 
                 label="Released" type="text" placeholder="Released"/>
