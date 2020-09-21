@@ -3,6 +3,7 @@ import PopSuc from "./PopSuc.png"
 import "./CreateAccountBody.css"
 import { InputBar } from "../../components/Header/Input"
 import { Button } from "../../components/Header/NavButtons/Button";
+import { Redirect } from "react-router-dom"
 
 export class CreateAccountBody extends React.Component{   
 
@@ -10,7 +11,8 @@ export class CreateAccountBody extends React.Component{
     username: '',
     password:'',
     retypepassword:'',
-    alertCssClass: "alertCssClass"
+    alertCssClass: "alertCssClass",
+    redirect: false
   };
 
 
@@ -21,7 +23,6 @@ handleChangePassword = event => this.setState({password: event.target.value})
 handleChangeRetypePassword = event => this.setState({retypepassword: event.target.value})
 
 handleCreateAccount = ()=> {
-  console.log("o sa mearga");
   if (this.state.password !== this.state.retypepassword) {
     alert("Password doesn't match!!")
 
@@ -45,15 +46,24 @@ handleCreateAccount = ()=> {
          alert("Username already existing!! Please go to Log in Page.")
         }else{
          localStorage.setItem("accessToken", json.accessToken);
-
+         this.setState({
+          redirect: true
+        })
+        window.location.reload()
+         
         }
       });
   }
 }
 
 
-  render(){    
-  return (
+  render(){ 
+    const { redirect } = this.state;
+    if (redirect) {
+      return <Redirect to="/"/>
+    }
+  
+    return (
             <div className="CreateAccountBody" >
                 <img src={PopSuc} alt="popsuc" className="pop-suc"></img>
                 <div className="Inputs-Container">
