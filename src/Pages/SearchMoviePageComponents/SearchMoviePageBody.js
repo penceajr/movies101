@@ -35,6 +35,11 @@ export class SearchMoviePageBody extends React.Component {
 
 
 handleSearchMovieBy = (secondUrlPart) => {
+    if(this.state.CreatedURL <= 5) {
+        this.handleShowPagination.disabled=true;
+    }else{
+        this.handleShowPagination.disabled=false
+    }
         console.log(this.state.CreatedURL,secondUrlPart);
         fetch(`http://movies-app-siit.herokuapp.com/movies?${secondUrlPart}`)
           .then((res) => res.json())
