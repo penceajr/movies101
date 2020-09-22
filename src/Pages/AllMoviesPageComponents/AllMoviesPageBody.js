@@ -27,17 +27,17 @@ export class AllMoviesPageBody extends React.Component{
               pagination: json.pagination,
               RightPage: json.pagination.links.next,
               CurrentPage: json.pagination.currentPage,
-              nrOfPages: json.pagination.nrOfPages,
+              nrOfPages: json.pagination.numberOfPages,
             });
         });
     }
-    
     componentDidMount(){
         this.handleGetAllMovies();
     }
+   
 
     handleShowPagination = (event) => {
-        if(event.target.innerHTML === ">>"){
+        if(event.target.className === "right-page-button"){
             fetch(this.state.RightPage)
         .then((res) => res.json())
         .then((json) => {
@@ -61,10 +61,10 @@ export class AllMoviesPageBody extends React.Component{
                 pagination: json.pagination,
                 RightPage: json.pagination.links.next,
                 LeftPage: json.pagination.links.prev,
-                CurrentPage: json.pagination.currentPage,
+                CurrentPage: json.pagination.currentPage
             })
         })
-    }
+     }
     }
 
     render (){
@@ -77,8 +77,8 @@ export class AllMoviesPageBody extends React.Component{
                 {this.state.movieData.map((movie, index) => (
                 <MovieCard  
                     key={index} 
-                    Title={movie.title} 
-                    Poster={movie.poster}
+                    Title={movie.Title} 
+                    Poster={movie.Poster}
                     imdbRating={movie.imdbRating}
                     id={movie._id}
                 />  
@@ -89,17 +89,16 @@ export class AllMoviesPageBody extends React.Component{
                 <Button 
                     cssClass="left-page-button" 
                     label="<<"
-                    onClick={this.handleShowPagination}   
+                    onSubmit={this.handleShowPagination}   
                 />
                 <Button 
                     cssClass="current-page-button" 
-                    // label="1"
-                    // onClick={this.state.CurrentPage}/{this.state.nrOfPages}    
+                    label={`${this.state.CurrentPage}/${this.state.nrOfPages}`}   
                 />
                  <Button 
                     cssClass="right-page-button" 
                     label=">>"
-                    onClick={this.handleShowPagination}
+                    onSubmit={this.handleShowPagination}
                 />
             </div>
             

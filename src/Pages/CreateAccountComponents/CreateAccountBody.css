@@ -5,25 +5,31 @@
 }
 
 .pop-suc{
-    margin-top: 230px;
-    width: 400px;
-    height: 450px;
-    margin-left: 600px;
+  margin-top: 100px;
+  width: 400px;
+  height: 450px;
+  margin-left: 300px; 
+} 
+
+div.Inputs-Container{
+  margin-top: 250px;
+  margin-left: 60px;
 }
 
-.Inputs-Container{
-  margin-top: 340px;
-  margin-left: 50px;
-  
-}
-
-.createAccount-label{ 
+.user-createAccount-label, 
+.pass-createAccount-label,
+.retype-createAccount-label{ 
+  color:#233f5f;
+  margin-right: 20px;
+  margin-bottom: 10px;
   font-size: xx-large;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-weight: 900;
 }
 
-.createAccount-input{
+.user-createAccount-input,
+.pass-createAccount-input,
+.retype-createAccount-input{
   width: 200px;
   height: 30px;
   border: 2px solid darkgray;
@@ -31,12 +37,22 @@
   padding: 5px;
 }
 
+.user-createAccount-label, 
+.pass-createAccount-label{
+  margin-left: 110px;
+}
+
+.pass-createAccount-input {
+  margin-left: 10px;
+}
+
 .create-account-button-container{
   margin: 40px;
-  margin-left: 100px;
+  margin-left: 360px;  
 }
 
 .createAccountButton{
+  color:#233f5f;
   margin-right: 30px;
   width: 150px;
   height: 40px;

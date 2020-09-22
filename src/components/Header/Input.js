@@ -15,7 +15,8 @@ export function InputBar(props){
             type={props.type}  
             placeholder={props.placeholder}
             value={props.value}
-            onChange={props.onChangeValue}>
+            onChange={props.onChangeValue}
+            onBlur={props.onLeave}>
         </input>
     </div>
     )

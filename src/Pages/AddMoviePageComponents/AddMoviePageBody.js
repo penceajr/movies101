@@ -3,21 +3,21 @@ import camera from "./camera.png";
 import "./AddMoviePageBody.css";
 import { InputBar } from "../../components/Header/Input";
 import { Button } from "../../components/Header/NavButtons/Button";
-import  MovieCard  from "../HomePage Components/MovieCard/MovieCard";
 
 export class AddMoviePageBody extends React.Component {
    state = {
-        title:"",
-        year:"",
-        imageURL:"",
-        released:"",
-        runtime:"",
-        genre:"",
-        director:"",
-        actors:"",
-        plot:"",
-        country:"",
-        imdbRating:"",
+        Title:"",
+        Year:"",
+        ImageURL:"",
+        Released:"",
+        Runtime:"",
+        Genre:"",
+        Director:"",
+        Actors:"",
+        Plot:"",
+        Country:"",
+        ImdbRating:"",
+        UrlTyped: ""
     };
 
     handleAddTitle = event => this.setState({Title: event.target.value})
@@ -54,35 +54,49 @@ export class AddMoviePageBody extends React.Component {
                 "X-Auth-Token": localStorage.getItem("accessToken"),
             },
             body:JSON.stringify({
-                Title: this.state.title,
-                Year: this.state.year,
-                Poster: this.state.imageURL,
-                Released:this.state.released,
-                Runtime:this.state.runtime,
-                Genre:this.state.genre,
-                Director:this.state.director,
-                Actors:this.state.actors,
-                Plot:this.state.plot,
-                Country:this.state.country,
-                ImdbRating:this.state.imdbRating,
+                Title: this.state.Title,
+                Year: this.state.Year,
+                Poster: this.state.ImageURL,
+                Released:this.state.Released,
+                Runtime:this.state.Runtime,
+                Genre:this.state.Genre,
+                Director:this.state.Director,
+                Actors:this.state.Actors,
+                Plot:this.state.Plot,
+                Country:this.state.Country,
+                ImdbRating:this.state.ImdbRating,
 
             }),
         })
             .then((res) => res.json())
             .then((json) => {
                 console.log(json);
-                if (json.message === "You need to be authenticated to be able to create a movie") {
-                    alert ("You need to be authenticated to be able to add a movie ! Please go to Create Account Page.")
-                }else{
-                    window.location.reload();
-                }
-                
+                window.location.reload();                
             });
     };
+    
+    getURLValue= event => {
+        console.log(this.state)
+         this.setState({UrlTyped: event.target.value})
+        }
+
+    RenderPosterContainer = () => {
+    if(this.state.UrlTyped){
+        return (
+            <div>
+                <h5 className="movie-card-title">{this.state.Title}</h5>   
+                <p className="movie-card-imdb-Rating">{this.state.ImdbRating}</p>    
+                <img src={this.state.UrlTyped} alt="poster" className="img-container"></img>
+            </div>
+            )
+    }   
+        return <p className="initial-paragraph">Your Movie</p>
+
+    }
 
     render(){
         return (
-        <div className="add-movie-page-body" >
+        <div className="add-movie-page-body">
             <img src={camera} alt ="camera" className="movie-camera"></img> 
             <div className="add-movie-container"> 
                 <div className="inputs-container">
@@ -106,12 +120,22 @@ export class AddMoviePageBody extends React.Component {
                         onChangeValue={this.handleAddYear}
                         />
                     <InputBar 
+                        label="ImdbRating"
+                        type="text"
+                        placeholder="insert ImdbRating"
+                        InputcssClass="add-input-container"
+                        LabelcssClass="add-input-label"
+                        value={this.state.value}
+                        onChangeValue={this.handleAddImdbRating}
+                         />
+                    <InputBar 
                         label="ImageURL"
                         type="text"
                         placeholder="Insert image URL"
                         InputcssClass="add-input-container" 
                         LabelcssClass="add-input-label"
                         value={this.state.value}
+                        onLeave={this.getURLValue}
                         onChangeValue={this.handleAddImageURL}
                         />
                     <InputBar
@@ -177,38 +201,19 @@ export class AddMoviePageBody extends React.Component {
                         value={this.state.value}
                         onChangeValue={this.handleAddCountry}
                         />
-                    <InputBar 
-                        label="ImdbRating"
-                        type="text"
-                        placeholder="insert ImdbRating"
-                        InputcssClass="add-input-container"
-                        LabelcssClass="add-input-label"
-                        value={this.state.value}
-                        onChangeValue={this.handleAddImdbRating}
-                         />
+                   
 
                 <div className="button-container">
                     <Button 
                     cssclass="add-movie-button" 
                     label="Add a movie"
-                    onClick={this.handleAddMovie}
+                    onSubmit={this.handleAddMovie}
                     />
                 </div>
             </div>
         </div>    
         <div className="added-movie-container">
-            <MovieCard />
-        
-        <div className="buttons-container">
-            <Button 
-            cssclass="delete-movie-button-1" 
-            label="Delete movie"
-            />
-            <Button 
-            cssclass="edit-movie-button-1" 
-            label="Edit movie"
-            />
-        </div> 
+            {this.RenderPosterContainer()}
         </div>  
     </div>
         )
