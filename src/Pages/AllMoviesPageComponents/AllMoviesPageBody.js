@@ -31,10 +31,10 @@ export class AllMoviesPageBody extends React.Component{
             });
         });
     }
-    
     componentDidMount(){
         this.handleGetAllMovies();
     }
+   
 
     handleShowPagination = (event) => {
         if(event.target.className === "right-page-button"){
@@ -61,10 +61,10 @@ export class AllMoviesPageBody extends React.Component{
                 pagination: json.pagination,
                 RightPage: json.pagination.links.next,
                 LeftPage: json.pagination.links.prev,
-                CurrentPage: json.pagination.currentPage,
+                CurrentPage: json.pagination.currentPage
             })
         })
-    }
+     }
     }
 
     render (){
