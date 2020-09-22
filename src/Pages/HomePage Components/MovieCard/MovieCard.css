@@ -1,15 +1,17 @@
 .movie-card {
     margin: 10px;
     flex-wrap: wrap;
-    
+    align-content: center;
+    border-radius: 5px;
 }
 
 .title-container {
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 5px 5px 5px 5px;
    
@@ -35,3 +37,4 @@ img.rating-star {
     font-weight: 700;
     
 }
+

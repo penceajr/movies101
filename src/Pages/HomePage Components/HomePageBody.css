@@ -9,14 +9,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 80px;
     margin-left: 100px;
     justify-content: space-around;
+    
    
 } 
 
 .best-movies img{
-    height:350px;
-    width: 270px;  
+    height:300px;
+    width: 200px;  
+    box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
 } 
 
 .top-rated-movies {
@@ -25,9 +28,14 @@
 .top-rated-movies img{
     width: 400px;
     height: 600px;
+    box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
    
 } 
 
 .rated-movie {
+
+    color:red;
     font-weight: 900;
+    text-align: center;
 }
+

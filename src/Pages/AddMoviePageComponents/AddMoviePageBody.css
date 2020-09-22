@@ -37,5 +37,5 @@ img.movie-camera {
 }
 
 .rating-star {
-    display: none;
+    display: flex;
 }
