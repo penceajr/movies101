@@ -13,6 +13,7 @@ import { SearchMoviePage } from "./Pages/SearchMoviePage";
 import { Footer } from "./components/Header/Footer";
 import { MovieDetailsPage } from "./Pages/MovieDetails";
 import {AddMoviePage} from "./Pages/AddMoviePage";
+import {AllMoviesPage} from "./Pages/AllMoviesPage";
 
 function App() {
   return (
@@ -32,8 +33,8 @@ function App() {
             <Route path="/MovieSearch">
               <SearchMoviePage />
             </Route>
-            <Route path="/MovieDetails">
-              <MovieDetailsPage />
+            <Route path="/AllMovies">
+              <AllMoviesPage />
             </Route>
             <Route path ="/AddMovie">
               <AddMoviePage />

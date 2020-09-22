@@ -20,7 +20,6 @@ handleOnClick = () => {
                 <img src={star} alt="star" className="rating-star" />
                 <p className="movie-card-imdb-Rating">{this.props.imdbRating}</p>    
             </div>
-
             <img src={this.props.Poster} alt="img" className="movie-card-img"/>
         </div>
     );     

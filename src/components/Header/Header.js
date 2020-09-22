@@ -2,7 +2,7 @@ import React from "react" ;
 import "./Header.css";
 
 import { AppLogo } from "./AppLogo";
-import { MovieDetails } from "./MovieDetails";
+import { AllMovies } from "./AllMovies";
 import { MovieSearch }  from "./MovieSearch";
 import { AddMovie } from "./AddMovie";
 import { NavButtons } from "./NavButtons/NavButtons";
@@ -12,7 +12,7 @@ import { NavButtons } from "./NavButtons/NavButtons";
 export function Header() {
     return <div className = "header">
         <AppLogo />
-        <MovieDetails />
+        <AllMovies />
         <MovieSearch />
         <AddMovie />
         <NavButtons />
