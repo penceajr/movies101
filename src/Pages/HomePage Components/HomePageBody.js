@@ -61,7 +61,6 @@ state ={
 
 componentDidMount(){
     this.getAllMovies();
-        
 }
     
     render(){

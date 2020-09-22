@@ -3,7 +3,8 @@ div.add-movie-page-body {
     height: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
+    margin-top: 100px; 
 }
 
 img.movie-camera {
@@ -26,16 +27,22 @@ img.movie-camera {
 
 
 .added-movie-container {
-    width: 50%;
-    height: 90%;
+    width: 400px;
+    height: fit-content;
     margin: 1px;
-    
-
-    /* flex-direction: row;
-    flex-wrap: wrap; */
-
+    border: 2px solid black;
+    align-content: center;
 }
 
 /* img.rating-star {
     display: none;
-} */
+}
+
+.movie-card-title,
+.movie-card-imdb-Rating,
+.img-container{
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+}

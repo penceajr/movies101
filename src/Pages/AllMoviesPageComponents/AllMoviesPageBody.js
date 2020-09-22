@@ -27,7 +27,7 @@ export class AllMoviesPageBody extends React.Component{
               pagination: json.pagination,
               RightPage: json.pagination.links.next,
               CurrentPage: json.pagination.currentPage,
-              nrOfPages: json.pagination.nrOfPages,
+              nrOfPages: json.pagination.numberOfPages,
             });
         });
     }
@@ -37,7 +37,7 @@ export class AllMoviesPageBody extends React.Component{
    
 
     handleShowPagination = (event) => {
-        if(event.target.innerHTML === ">>"){
+        if(event.target.className === "right-page-button"){
             fetch(this.state.RightPage)
         .then((res) => res.json())
         .then((json) => {
@@ -92,7 +92,7 @@ export class AllMoviesPageBody extends React.Component{
                     onSubmit={this.handleShowPagination}   
                 />
                 <Button 
-                    cssClass="current-page-button"
+                    cssClass="current-page-button" 
                     label={`${this.state.CurrentPage}/${this.state.nrOfPages}`}   
                 />
                  <Button 

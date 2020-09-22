@@ -2,7 +2,6 @@ import React from "react"
 import "./SearchMoviePageBody.css"
 import { InputBar } from "../../components/Header/Input"
 import { Button } from "../../components/Header/NavButtons/Button"
-// import  {render} from "@testing-library/react"
 import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 
 export class SearchMoviePageBody extends React.Component {
@@ -38,26 +37,10 @@ export class SearchMoviePageBody extends React.Component {
             Accept: "application/json",
             "Content-Type": "application/json",
         },
-        // body:JSON.stringify({
-        //     Title: this.state.Title,
-        //     Year: this.state.Year,
-        //     Genre: this.state.Genre,
-        //     Country: this.state.Country,
-        //     Language: this.state.Language,
-        //     ImdbRating: this.state.imdbRating,
-        //     Runtime: this.state.Runtime,
-        //     ImdbVotes: this.state.imdbVotes,
-        //     Type: this.state.Type,
-        // }),
     })
           .then((res) => res.json())
           .then((json) => {
             console.log(json);
-            // if (json.message === "An invalid regular expression was supplied"){
-            //     alert ("The movie is not on a searchable field")
-            // }else{
-            //     window.location.reload();
-            // }
           });
       };
    
@@ -165,7 +148,7 @@ export class SearchMoviePageBody extends React.Component {
             <Button 
             cssClass="searchMoviePage-button" 
             label="Search"
-            onClick={this.handleSearchMovieBy}
+            onSubmit={this.handleSearchMovieBy}
             />
             </div>
 
