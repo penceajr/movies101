@@ -11,6 +11,7 @@
 .input-Container{
     display: flex;
     align-items: center;
+    border-right: 1px solid black;
 } 
 
 .search-input,
@@ -37,4 +38,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 15px;
+}
+
+h2 {
+    color:red;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
 }
