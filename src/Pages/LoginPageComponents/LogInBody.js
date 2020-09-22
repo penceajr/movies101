@@ -32,7 +32,7 @@ export class LogInBody extends React.Component{
         password: this.state.password,
       }),
     })
-      .then((res) => res.json())
+      .then((res) => res.json()) 
       .then((json) => {
         if (json.message === "Wrong password") {
           alert("Incorrect credentials!!")
@@ -60,8 +60,8 @@ export class LogInBody extends React.Component{
               <InputBar  
                 label="UserName" 
                 type="text"
-                InputcssClass="input-container-input" 
-                LabelcssClass="input-container-label"
+                InputcssClass="user-container-input" 
+                LabelcssClass="user-container-label"
                 placeholder="Type your username" 
                 value={this.state.value}
                 onChangeValue={this.handleChangeUsername}
@@ -70,8 +70,8 @@ export class LogInBody extends React.Component{
               <InputBar 
                 label="Password" 
                 type="password" 
-                InputcssClass="input-container-input"
-                LabelcssClass="input-container-label"
+                InputcssClass="pass-container-input"
+                LabelcssClass="pass-container-label"
                 placeholder="Type your password"
                 value={this.state.value}
                 onChangeValue={this.handleChangePassword} 

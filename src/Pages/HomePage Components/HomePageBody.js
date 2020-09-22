@@ -61,12 +61,8 @@ state ={
 
 componentDidMount(){
     this.getAllMovies();
-<<<<<<< HEAD
+        
 }
-=======
-    
-        }
->>>>>>> 28541cc7405312245b470dd990c64a15df8099d2
     
     render(){
         return (

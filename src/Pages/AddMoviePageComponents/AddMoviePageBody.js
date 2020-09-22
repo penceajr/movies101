@@ -54,9 +54,9 @@ export class AddMoviePageBody extends React.Component {
                 "X-Auth-Token": localStorage.getItem("accessToken"),
             },
             body:JSON.stringify({
-                Title: this.state.title,
+                Title: this.state.Title,
                 Year: this.state.year,
-                Poster: this.state.imageURL,
+                ImageURL: this.state.imageURL,
                 Released:this.state.released,
                 Runtime:this.state.runtime,
                 Genre:this.state.genre,

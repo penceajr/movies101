@@ -68,8 +68,8 @@ handleCreateAccount = ()=> {
                 <img src={PopSuc} alt="popsuc" className="pop-suc"></img>
                 <div className="Inputs-Container">
                 <InputBar
-                  LabelcssClass="createAccount-label"
-                  InputcssClass="createAccount-input" 
+                  LabelcssClass="user-createAccount-label"
+                  InputcssClass="user-createAccount-input" 
                   label="UserName" 
                   type="text" 
                   placeholder="Type your username" 
@@ -78,8 +78,8 @@ handleCreateAccount = ()=> {
                   />
                 
                 <InputBar 
-                  LabelcssClass="createAccount-label"
-                  InputcssClass="createAccount-input"
+                  LabelcssClass="pass-createAccount-label"
+                  InputcssClass="pass-createAccount-input"
                   label="Password" 
                   type="password" 
                   placeholder="Type your password"
@@ -88,8 +88,8 @@ handleCreateAccount = ()=> {
                   />
 
                 <InputBar 
-                  LabelcssClass="createAccount-label"
-                  InputcssClass="createAccount-input"
+                  LabelcssClass="retype-createAccount-label"
+                  InputcssClass="retype-createAccount-input"
                   label="Retype Password" 
                   type="password" 
                   placeholder="Please retype your password"
