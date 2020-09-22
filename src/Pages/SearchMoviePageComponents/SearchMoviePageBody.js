@@ -15,6 +15,7 @@ export class SearchMoviePageBody extends React.Component {
             Runtime:"",
             imdbVotes:"",
             Type:"",
+            CreatedURL: "http://movies-app-siit.herokuapp.com/movies?"
         };
 
     handleTitle = event => this.setState({Title: event.target.value})
@@ -24,31 +25,50 @@ export class SearchMoviePageBody extends React.Component {
     handleLanguage = event => this.setState({Language:event.target.value})
     handleimdbRating = event => this.setState({imdbRating: event.target.value})
     handleRuntime = event => this.setState({Runtime: event.target.value})
-    handleimdbVotes = event => this.setState({imdbVotes: event.target.values})
+    handleimdbVotes = event => this.setState({imdbVotes: event.target.value})
     handleType = event => this.setState({Type: event.target.value})
 
 
-    handleSearchMovieBy = () => {
-        console.log("search movie by");
-        fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999", {
-        method: "GET",
-        mode: "cors",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-    })
+handleSearchMovieBy = (secondUrlPart) => {
+        console.log(this.state.CreatedURL,secondUrlPart);
+        fetch(`http://movies-app-siit.herokuapp.com/movies?${secondUrlPart}`)
           .then((res) => res.json())
           .then((json) => {
-            console.log(json);
+            this.setState({FoundMovie: json.results})
           });
       };
    
-      componentDidMount() {
-          this.handleSearchMovieBy();
+componentDidMount() {
       }     
+ 
       
+
+checkIfEmpyValues = ()=>{
+    let newArray = this.state;
+
+     for(var key in newArray) {
+        if(newArray[key] === "" ||
+           key === "FoundMovie" ||
+           newArray[key] === "http://movies-app-siit.herokuapp.com/movies?") {
+         
+            delete newArray[key]
+        }
+    }
+
+    //creating URL
+    let secondUrlPart="";
+    for (const key in newArray) {
+        secondUrlPart = `${secondUrlPart}${key}=${this.state[key]}&`
+    }
+    
+    //get movies based on search fields
+    this.handleSearchMovieBy(secondUrlPart)
+
+
+    }
+
     render() {
+        
     return ( 
         <div className="SearchMoviePageBody">
             <h2>Search a movie by:</h2>
@@ -148,13 +168,13 @@ export class SearchMoviePageBody extends React.Component {
             <Button 
             cssClass="searchMoviePage-button" 
             label="Search"
-            onSubmit={this.handleSearchMovieBy}
+            onSubmit={this.checkIfEmpyValues}
             />
             </div>
 
             
             
-            <h2>All movies:</h2>
+            <h2>Movie found:</h2>
             
            <div className="Movie-Found-Container">
             {this.state.FoundMovie.map((element, index) => (

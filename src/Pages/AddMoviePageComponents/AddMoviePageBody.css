@@ -34,16 +34,23 @@ img.movie-camera {
     align-content: center;
 }
 
+
 /* img.rating-star {
     display: none;
+} */
+
+.rating-star {
+    display: flex;
 }
 
-.movie-card-title,
-.movie-card-imdb-Rating,
-.img-container{
-    justify-content: center;
-    display: flex;
-    font-size: 13px;
-    font-weight: 700;
+
+
+
+.initial-paragraph {
+    text-align: center;
 }
-*/
+
+img.img-container{
+    width: 400px;
+    height: 500px;
+}
