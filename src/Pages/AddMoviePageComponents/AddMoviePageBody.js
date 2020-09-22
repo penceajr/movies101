@@ -5,7 +5,6 @@ import { InputBar } from "../../components/Header/Input";
 import { Button } from "../../components/Header/NavButtons/Button";
 import  MovieCard  from "../HomePage Components/MovieCard/MovieCard";
 
-
 export class AddMoviePageBody extends React.Component {
    state = {
         title:"",
