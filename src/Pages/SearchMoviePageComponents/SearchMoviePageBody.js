@@ -6,6 +6,11 @@ import MovieCard from "../HomePage Components/MovieCard/MovieCard"
 
 export class SearchMoviePageBody extends React.Component {
         state = {
+            paginationData: [],
+            LeftPage: "",
+            CurrentPage: "",
+            RightPage: "",
+            nrOfPages: "",
             FoundMovie: [],
             Title:"",
             Year:"",
@@ -34,14 +39,44 @@ handleSearchMovieBy = (secondUrlPart) => {
         fetch(`http://movies-app-siit.herokuapp.com/movies?${secondUrlPart}`)
           .then((res) => res.json())
           .then((json) => {
-            this.setState({FoundMovie: json.results})
+            this.setState({
+                FoundMovie: json.results})
           });
       };
    
 componentDidMount() {
       }     
  
-      
+handleShowPagination = (event) => {
+        if(event.target.className === "right-page-button"){
+            fetch(this.state.RightPage)
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+          this.setState({
+              FoundMovie: json.results, 
+              pagination: json.pagination, 
+              RightPage: json.pagination.links.next,
+              LeftPage: json.pagination.links.prev,
+              CurrentPage: json.pagination.currentPage,
+            })
+        })
+        
+    } else {
+        fetch(this.state.LeftPage)
+        .then((res) =>res.json())
+        .then((json) => {
+            console.log(json);
+            this.setState({
+                FoundMovie: json.results,
+                pagination: json.pagination,
+                RightPage: json.pagination.links.next,
+                LeftPage: json.pagination.links.prev,
+                CurrentPage: json.pagination.currentPage
+            })
+        })
+     }
+    }
 
 checkIfEmpyValues = ()=>{
     let newArray = this.state;
@@ -188,6 +223,23 @@ checkIfEmpyValues = ()=>{
             ))
             }
             </div>
+            <div className="pagination-container">
+            <Button 
+                    cssClass="left-page-button" 
+                    label="<<"
+                    onSubmit={this.handleShowPagination}   
+                />
+                <Button 
+                    cssClass="current-page-button" 
+                    label={`${this.state.CurrentPage}/${this.state.nrOfPages}`}   
+                />
+                 <Button 
+                    cssClass="right-page-button" 
+                    label=">>"
+                    onSubmit={this.handleShowPagination}
+                />
+                </div>
+
         </div>
         
     );

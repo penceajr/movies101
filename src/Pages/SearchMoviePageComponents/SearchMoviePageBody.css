@@ -1,6 +1,8 @@
 .SearchMoviePageBody{
     height: 100%;
     width: 100%;
+   
+    
 }
 
 .searchPage-Inputs-Container{
@@ -11,7 +13,7 @@
 .input-Container{
     display: flex;
     align-items: center;
-    border-right: 1px solid black;
+    
 } 
 
 .search-input,
@@ -44,4 +46,11 @@ h2 {
     color:red;
     text-align: center;
     text-shadow: 2px 2px 3px black;
+}
+
+.Movie-Found-Container {
+   
+    display: flex;
+   /* overflow: auto; */
+    
 }
