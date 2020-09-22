@@ -1,0 +1,12 @@
+.all-movies-page-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.all-movies-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
