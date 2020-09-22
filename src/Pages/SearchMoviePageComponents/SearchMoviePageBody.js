@@ -154,7 +154,7 @@ export class SearchMoviePageBody extends React.Component {
 
             
             
-            <h2>All movies:</h2>
+            <h2>Movie found:</h2>
             
            <div className="Movie-Found-Container">
             {this.state.FoundMovie.map((element, index) => (
