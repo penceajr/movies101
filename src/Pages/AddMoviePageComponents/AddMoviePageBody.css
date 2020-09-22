@@ -34,9 +34,15 @@ img.movie-camera {
     align-content: center;
 }
 
+
+/* img.rating-star {
+    display: none;
+} */
+
 .rating-star {
     display: flex;
 }
+
 
 
 .initial-paragraph {
