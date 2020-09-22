@@ -27,6 +27,7 @@
 .MovieInformationContainer{ 
     margin-left: 200px;
     margin-top: 200px;
+    overflow: auto;
 }
 
 .Inputs-Container{
