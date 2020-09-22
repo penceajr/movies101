@@ -37,3 +37,13 @@ img.movie-camera {
 .rating-star {
     display: flex;
 }
+
+
+.initial-paragraph {
+    text-align: center;
+}
+
+img.img-container{
+    width: 400px;
+    height: 500px;
+}

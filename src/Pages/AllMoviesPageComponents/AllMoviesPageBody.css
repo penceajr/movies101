@@ -19,5 +19,6 @@
 
 .movie-card-img{
     height: 300px;
+    width: 200px;
     box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
 }
