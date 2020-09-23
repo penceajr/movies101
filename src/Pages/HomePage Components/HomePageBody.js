@@ -29,10 +29,6 @@ state ={
          fetch("https://movies-app-siit.herokuapp.com/movies?take=99999999&skip=0")
           .then((res) => res.json())
           .then((json) => {
-
-            
-           
-            console.log(json.results);
             this.setState({
                 BestRatedMovies: json.results
                .filter(movie => movie.imdbRating > 8.4)

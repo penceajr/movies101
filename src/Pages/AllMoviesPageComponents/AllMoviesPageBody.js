@@ -17,11 +17,9 @@ export class AllMoviesPageBody extends React.Component{
     }
 
     handleGetAllMovies = () => {
-        console.log("all movies");
         fetch(this.state.URL)
         .then((res) => res.json())
         .then((json) => {
-          console.log(json);
           this.setState({
               movieData: json.results, 
               pagination: json.pagination,
@@ -41,7 +39,6 @@ export class AllMoviesPageBody extends React.Component{
             fetch(this.state.RightPage)
         .then((res) => res.json())
         .then((json) => {
-          console.log(json);
           this.setState({
               movieData: json.results, 
               pagination: json.pagination, 
@@ -55,7 +52,6 @@ export class AllMoviesPageBody extends React.Component{
         fetch(this.state.LeftPage)
         .then((res) =>res.json())
         .then((json) => {
-            console.log(json);
             this.setState({
                 movieData: json.results,
                 pagination: json.pagination,

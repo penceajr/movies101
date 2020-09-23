@@ -41,7 +41,6 @@ handleCreateAccount = ()=> {
       })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
         if (json.message === "Username already existing") {
          alert("Username already existing!! Please go to Log in Page.")
         }else{
