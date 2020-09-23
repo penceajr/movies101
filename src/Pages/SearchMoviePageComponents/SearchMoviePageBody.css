@@ -51,3 +51,35 @@ h2 {
     flex-wrap: wrap;
     width: 100%;
 }
+
+.search-movie-card{
+    width: 230px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.search-movie-card .title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.search-movie-card .movie-card-title{
+    font-size: 14px;
+    font-weight: 900;
+    margin: 5px;
+    height: 60px;
+}
+
+.search-movie-card .movie-card-img{
+    margin-left: 4px;
+    margin-bottom: 4px;
+    height: 300px;
+    width: 210px;
+    border-radius: 3px;
+ }

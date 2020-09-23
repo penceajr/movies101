@@ -239,6 +239,7 @@ createPaginationElements = () =>{
            <div className="Movie-Found-Container">
             {this.state.FoundMovie.map((element, index) => (
                 <MovieCard 
+                    className="search-movie-card"
                     id={element._id}
                     key={index}
                     Title={element.Title}
