@@ -4,26 +4,73 @@ div.add-movie-page-body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 100px; 
+    margin-top: 30px; 
 }
 
 img.movie-camera {
     width: 60px;
     height: 60px;
-    margin: 5px;
-    
+    margin: 5px;   
 }
 
 .add-movie-container {
-    width: 40%;
-    height: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 120%;
 }
 
 .inputs-container {
-    margin-top: 340px;
-    margin-left: 50px;
+    margin-top: 40px;
+    margin-left: 30px;
+    height: 50%;
 }
 
+.add-movie-title{
+    font-size: xx-large;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    color:#233f5f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-input-container {
+    width: 250px;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 25px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-input-label {
+    display: flex;
+    justify-content: center;
+    width: 110px;
+    font-weight: 630;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.button-container {
+    width: 150px;
+    height: 35px;
+    margin-left: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.add-movie-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
 
 
 .added-movie-container {
@@ -35,22 +82,37 @@ img.movie-camera {
 }
 
 
-/* img.rating-star {
-    display: none;
-} */
-
 .rating-star {
     display: flex;
 }
 
 
-
-
 .initial-paragraph {
     text-align: center;
+   
+}
+
+.added-title {
+    
+}
+.movie-card-imdb-Rating {
+    height:160px;
+    
+}
+
+.rating-star {
+   
+}
+
+.movie-card-title {
+    
+    margin-left:50px;
 }
 
 img.img-container{
-    width: 400px;
+    margin-left: 40px;
+    width: 300px;
     height: 500px;
+    
 }
+

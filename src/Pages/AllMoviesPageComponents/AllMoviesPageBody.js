@@ -70,12 +70,13 @@ export class AllMoviesPageBody extends React.Component{
     render (){
         return (
         <div className="all-movies-page-body">
-            <div  className= "all-movies-title">
-                <h1 className="title">All Movies:</h1>
+            <div  className= "all-movies-title-container">
+                <h1 className="all-movies-title">All Movies:</h1>
             </div>
             <div className="all-movies-cards">
                 {this.state.movieData.map((movie, index) => (
                 <MovieCard  
+                    className="all-movies-movie-card" 
                     key={index} 
                     Title={movie.Title} 
                     Poster={movie.Poster}

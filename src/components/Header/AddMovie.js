@@ -7,6 +7,6 @@ import "./AddMovie.css";
 
 export function AddMovie () {
     return ( <Link to = "/AddMovie">
-        <img src={clapperboard} alt="add" className="add-movie" />
+        <img src={clapperboard} alt="add" className="add-movie-logo" />
         </Link>)
 }

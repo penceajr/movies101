@@ -5,7 +5,7 @@
     border-radius: 5px;
 }
 
-.title-container {
+.title-container { 
     color: black;
     display: flex;
     flex-direction: column;
