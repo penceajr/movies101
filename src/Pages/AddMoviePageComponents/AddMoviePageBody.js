@@ -97,7 +97,7 @@ export class AddMoviePageBody extends React.Component {
             <img src={camera} alt ="camera" className="movie-camera"></img> 
             <div className="add-movie-container"> 
                 <div className="inputs-container">
-                    <p className="add-movie-title">Add Movie</p>
+                    <p className="add-movie-title">Add a Movie</p>
                     <InputBar 
                         label="Title"
                         type="text"
@@ -119,7 +119,7 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar 
                         label="ImdbRating"
                         type="text"
-                        placeholder="insert ImdbRating"
+                        placeholder="Insert ImdbRating"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
@@ -156,7 +156,7 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar
                         label="Genre"
                         type="text"
-                        placeholder="insert genre"
+                        placeholder="Insert genre"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
@@ -165,7 +165,7 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar 
                         label="Director"
                         type="text"
-                        placeholder="insert director"
+                        placeholder="Insert director"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
@@ -174,7 +174,7 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar
                         label="Actors"
                         type="text"
-                        placeholder="insert actors"
+                        placeholder="Insert actors"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
@@ -183,7 +183,7 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar 
                         label="Plot"
                         type="text"
-                        placeholder="insert plot"
+                        placeholder="Insert plot"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
@@ -192,22 +192,24 @@ export class AddMoviePageBody extends React.Component {
                     <InputBar 
                         label="Country"
                         type="text"
-                        placeholder="insert country"
+                        placeholder="Insert country"
                         InputcssClass="add-input-container"
                         LabelcssClass="add-input-label"
                         value={this.state.value}
                         onChangeValue={this.handleAddCountry}
                         />
                    
-
-                <div className="button-container">
-                    <Button 
-                    cssclass="add-movie-button" 
-                    label="Add a movie"
-                    onSubmit={this.handleAddMovie}
-                    />
                 </div>
-            </div>
+                <div className="button-container">
+                    <div className="add-button">
+                        <Button 
+                        cssclass="add-movie-button" 
+                        label="Add a movie"
+                        onSubmit={this.handleAddMovie}
+                        />
+                    </div>
+                </div>
+            
         </div>    
         <div className="added-movie-container">
             {this.RenderPosterContainer()}

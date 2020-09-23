@@ -14,8 +14,8 @@ handleOnClick = () => {
    
     render(){ 
     return (
-         <div className="movie-card" onClick={this.handleOnClick}>
-            <div className="title-container">
+         <div className={"movie-card"+ (this.props.className ? ` ${this.props.className}`:"")}onClick={this.handleOnClick}>
+            <div className="title-container ">
                 <h5 className="movie-card-title">{this.props.Title}</h5>
                 <img src={star} alt="star" className="rating-star" />
                 <p className="movie-card-imdb-Rating">{this.props.imdbRating}</p>    
