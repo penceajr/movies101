@@ -44,7 +44,6 @@ export class AddMoviePageBody extends React.Component {
 
 
     handleAddMovie = () => {
-        console.log("add movie");
         fetch ("http://movies-app-siit.herokuapp.com/movies", {
             method: "POST",
             mode: "cors",
@@ -70,13 +69,11 @@ export class AddMoviePageBody extends React.Component {
         })
             .then((res) => res.json())
             .then((json) => {
-                console.log(json);
                 window.location.reload();                
             });
     };
     
     getURLValue= event => {
-        console.log(this.state)
          this.setState({UrlTyped: event.target.value})
         }
 

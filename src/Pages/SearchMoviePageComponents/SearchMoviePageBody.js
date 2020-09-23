@@ -93,8 +93,7 @@ handleShowPagination = (event) => {
         fetch(this.state.LeftPage)
         .then((res) =>res.json())
         .then((json) => {
-            console.log(json);
-            this.setState({
+              this.setState({
                 FoundMovie: json.results,
                 RightPage: json.pagination.links.next,
                 LeftPage: json.pagination.links.prev,
