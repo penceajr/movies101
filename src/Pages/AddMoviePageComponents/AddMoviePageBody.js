@@ -3,6 +3,8 @@ import camera from "./camera.png";
 import "./AddMoviePageBody.css";
 import { InputBar } from "../../components/Header/Input";
 import { Button } from "../../components/Header/NavButtons/Button";
+import star from "../HomePage Components/MovieCard/star.png"
+import moviePoster from "./moviePoster.png"
 
 export class AddMoviePageBody extends React.Component {
    state = {
@@ -81,13 +83,17 @@ export class AddMoviePageBody extends React.Component {
     if(this.state.UrlTyped){
         return (
             <div>
-                <h5 className="movie-card-title">{this.state.Title}</h5>   
-                <p className="movie-card-imdb-Rating">{this.state.ImdbRating}</p>    
+                <div className="added-movie-title-container">
+                    <h5 className="movie-card-title">{this.state.Title}</h5>   
+                    <img src={star} alt="star" className="added-rating-star" /> 
+                    <p className="movie-card-imdb-Rating">{this.state.ImdbRating}</p>  
+                </div> 
                 <img src={this.state.UrlTyped} alt="poster" className="img-container"></img>
             </div>
             )
     }   
-        return <p className="initial-paragraph">Your Movie</p>
+        return <img src={moviePoster} alt="poster" className="movie-poster-before"></img>
+        // <p className="initial-paragraph">Your Movie</p>
 
     }
 
@@ -203,6 +209,7 @@ export class AddMoviePageBody extends React.Component {
                 <div className="button-container">
                     <div className="add-button">
                         <Button 
+                        cssClass="add-page-button"
                         cssclass="add-movie-button" 
                         label="Add a movie"
                         onSubmit={this.handleAddMovie}
