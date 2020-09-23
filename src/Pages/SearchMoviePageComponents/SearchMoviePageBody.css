@@ -45,3 +45,9 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px 3px black;
 }
+
+.Movie-Found-Container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}

@@ -15,7 +15,10 @@ export class SearchMoviePageBody extends React.Component {
             Runtime:"",
             imdbVotes:"",
             Type:"",
-            CreatedURL: "http://movies-app-siit.herokuapp.com/movies?"
+            RightPage:"",
+            LeftPage:"",
+            CurrentPage:"",
+            nrOfPages:"",
         };
 
     handleTitle = event => this.setState({Title: event.target.value})
@@ -30,11 +33,16 @@ export class SearchMoviePageBody extends React.Component {
 
 
 handleSearchMovieBy = (secondUrlPart) => {
-        console.log(this.state.CreatedURL,secondUrlPart);
-        fetch(`http://movies-app-siit.herokuapp.com/movies?${secondUrlPart}`)
+        console.log(secondUrlPart);
+        fetch(`http://movies-app-siit.herokuapp.com/movies?${secondUrlPart}take=5`)
           .then((res) => res.json())
           .then((json) => {
-            this.setState({FoundMovie: json.results})
+            this.setState({
+                    FoundMovie: json.results,
+                    RightPage: json.pagination.links.next,
+                    LeftPage: json.pagination.links.prev,
+                    CurrentPage: json.pagination.currentPage,
+                    nrOfPages: json.pagination.numberOfPages})
           });
       };
    
@@ -48,10 +56,10 @@ checkIfEmpyValues = ()=>{
 
      for(var key in newArray) {
         if(newArray[key] === "" ||
-           key === "FoundMovie" ||
+           key === "FoundMovie" || key === "RightPage" || key === "LeftPage" || key === "CurrentPage" ||
+           key === "nrOfPages" || key === "PaginationNeeded" ||
            newArray[key] === "http://movies-app-siit.herokuapp.com/movies?") {
-         
-            delete newArray[key]
+           delete newArray[key]
         }
     }
 
@@ -67,8 +75,61 @@ checkIfEmpyValues = ()=>{
 
     }
 
-    render() {
+handleShowPagination = (event) => {
+        if(event.target.className === "right-page-button"){
+            fetch(this.state.RightPage)
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+          this.setState({
+              FoundMovie: json.results, 
+              RightPage: json.pagination.links.next,
+              LeftPage: json.pagination.links.prev,
+              CurrentPage: json.pagination.currentPage,
+            })
+        })
         
+    } else {
+        fetch(this.state.LeftPage)
+        .then((res) =>res.json())
+        .then((json) => {
+            console.log(json);
+            this.setState({
+                FoundMovie: json.results,
+                RightPage: json.pagination.links.next,
+                LeftPage: json.pagination.links.prev,
+                CurrentPage: json.pagination.currentPage
+            })
+        })
+     }
+    }
+
+createPaginationElements = () =>{
+        if (this.state.nrOfPages > 1) {
+            return (
+                <div className="pagination-container">
+                    <Button 
+                        cssClass="left-page-button" 
+                        label="<<"
+                        onSubmit={this.handleShowPagination}   
+                    />
+                    <Button 
+                        cssClass="current-page-button" 
+                        label={`${this.state.CurrentPage}/${this.state.nrOfPages}`}   
+                    />
+                     <Button 
+                        cssClass="right-page-button" 
+                        label=">>"
+                        onSubmit={this.handleShowPagination}
+                    />
+                </div>)
+        }    
+}   
+
+
+    render() {
+       
+
     return ( 
         <div className="SearchMoviePageBody">
             <h2>Search a movie by:</h2>
@@ -188,6 +249,7 @@ checkIfEmpyValues = ()=>{
             ))
             }
             </div>
+                {this.createPaginationElements()}
         </div>
         
     );
