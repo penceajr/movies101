@@ -44,12 +44,13 @@ handleCreateAccount = ()=> {
         if (json.message === "Username already existing") {
          alert("Username already existing!! Please go to Log in Page.")
         }else{
-         localStorage.setItem("accessToken", json.accessToken);
-         this.setState({
-          redirect: true
-        })
-        window.location.reload()
-         
+          if(json.accessToken !== undefined) 
+              {  localStorage.setItem("accessToken", json.accessToken);
+              this.setState({
+              redirect: true
+                  })
+              window.location.reload()
+            }
         }
       });
   }
