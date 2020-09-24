@@ -11,7 +11,7 @@ handleOnClick = () => {
         
 }
    
-   
+    
     render(){ 
     return (
          <div className={"movie-card"+ (this.props.className ? ` ${this.props.className}`:"")}onClick={this.handleOnClick}>
