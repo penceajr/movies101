@@ -16,7 +16,7 @@ export class AllMoviesPageBody extends React.Component{
        nrOfPages: "",
     }
 
-    handleGetAllMovies = () => {
+    handleGetAllMovies = () => { 
         fetch(this.state.URL)
         .then((res) => res.json())
         .then((json) => {
