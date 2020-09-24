@@ -39,12 +39,13 @@ export class LogInBody extends React.Component{
         } if (json.message === "User not found") {
           alert("User not found! Join us by creating an account.")
         } else{
-        localStorage.setItem("accessToken", json.accessToken);
-        this.setState({
-          redirect: true
-        })
-        window.location.reload()
-         
+          if(json.accessToken !== undefined) 
+              {localStorage.setItem("accessToken", json.accessToken);
+              this.setState({
+                redirect: true
+              })
+            window.location.reload()
+            }
       }});
   }
 

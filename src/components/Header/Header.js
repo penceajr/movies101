@@ -15,13 +15,13 @@ state={
 }
 
 componentDidMount(){
-    if (localStorage.getItem("accessToken")) {
+    if (localStorage.getItem("accessToken") && localStorage.getItem("accessToken") !== undefined) {
         this.setState({UserState: true})
     }
 }
 
 checkIfUserLoggedIn = () => {
-        if (localStorage.getItem("accessToken")) {
+        if (this.state.UserState) {
            return(<AddMovie />)
         } 
      }
