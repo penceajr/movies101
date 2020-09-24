@@ -100,13 +100,11 @@ img.movie-camera {
 
 .rating-star {
     display: flex;
-    /* background-color:blue; */
 }
 
 
 .initial-paragraph {
     text-align: center;
-   
 }
 
 .added-movie-title-container{
@@ -117,29 +115,23 @@ img.movie-camera {
     margin: 5px;
     width: 370px;
     margin-left: 20px;
-    /* background-color:white;   */
 }
 
 .movie-card-imdb-Rating {
-    /* background-color: red; */
     justify-content: center;
     align-self: center;
     margin: 5px;
     margin-top: 22px;
-    height:25px;
-    
+    height:25px;  
 }
+
 .added-rating-star {
-    /* background-color: blueviolet; */
     width: 18px;
     height: 18px;
     margin-top: 12px;
 }
 
 .movie-card-title {
-    /* background-color: green; */
-    /* margin-left:50px;
-    margin-top: 10px; */
     margin: 10px;
     font-size: 30px;
     justify-content: center;
@@ -147,11 +139,9 @@ img.movie-camera {
 }
 
 img.img-container{
-    background-color: blue;
     margin-left: 55px;
     border-radius: 5px;
     width: 300px;
-    height: 450px;
-    
+    height: 450px;  
 }
 
