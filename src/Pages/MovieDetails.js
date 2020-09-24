@@ -49,6 +49,7 @@ getMovieInformation = (id) =>{
 componentDidMount(){
     const [search ,id ] = this.props.location.search.split("=");  
     this.getMovieInformation(id)
+    this.setState({MovieID: id})
 }
 
 handleUserState = () =>{
@@ -88,16 +89,17 @@ handleEditButton = () => {
 handleCancelButton = () =>{
     this.setState({EditButtonState: false, UserState:false})
 }
-handleSaveButton = () => {
-    let JsonBody = this.state;
 
+
+handleSaveButton = () => {
+    let JsonBody = {...this.state};
      for(var key in JsonBody) {
         if(JsonBody[key] === "" ||
            key === "UserState" || key === "MovieInformation" || key === "EditButtonState" || key === "MovieID" ||
            key === "redirect") {
            delete JsonBody[key]
         }
-    }
+    }   
 
     fetch(`https://movies-app-siit.herokuapp.com/movies/${this.state.MovieID}`, {
       method: "PUT",
@@ -112,6 +114,7 @@ handleSaveButton = () => {
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
+        // window.location.reload()
       })
 }
 

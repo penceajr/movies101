@@ -50,7 +50,7 @@
     color:#233f5f;
     font-weight: 900;
     text-align: center;
-    text-shadow: 2px 2px 3pxg gray;
+    text-shadow: 2px 2px 3px gray;
 }
 
 .top-rated-movies {
@@ -74,6 +74,15 @@
 
 .rated-movie-card .movie-card-imdb-Rating{
     margin-top: 55px;
+}
+
+.rated-movie {
+    text-align: center;
+    color:#233f5f;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px grey;
 }
 
 .rated-movie-card .movie-card-img{
