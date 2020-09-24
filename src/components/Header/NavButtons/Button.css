@@ -2,10 +2,20 @@
     border-radius: 5px;
     outline: none;
     margin-right: 10px;
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 800;
+    color:#233f5f; 
 }
 
 .LogOut-button{
     border-radius: 5px;
     outline: none;
     margin-right: 10px;
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 800;
+    color:#233f5f; 
 }

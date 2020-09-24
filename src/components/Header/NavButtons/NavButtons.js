@@ -31,7 +31,7 @@ checkIfUserLoggedIn = () => {
        return( 
         <div className="navigation-buttons">
         <Link to="/login">
-        <Button cssClass="nav-button" label="SIGN IN" /> 
+        <Button cssClass="nav-button" label="Sign In" /> 
         </Link>
         </div>
         )
