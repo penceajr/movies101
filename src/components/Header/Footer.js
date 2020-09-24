@@ -20,12 +20,12 @@ export function Footer() {
                 </address>
             </div>
             <div className="right-footer">
-            <img src={facebook} alt="f-chat" className="facebook-contact" />
-            <img src={instagram} alt="i-chat" className="instagram-contact" />
-            <img src={twitter} alt="t-chat" className="twitter-contact" />
-            <img src={gmail} alt="g-mail" className="gmail-contact" />
-            <img src={whatsapp} alt="w-chat" className="whatsapp-contact" />
-            <img src={pinterest} alt="p-info" className="pinterest-contact" />
+                <img src={facebook} alt="f-chat" className="facebook-contact" />
+                <img src={instagram} alt="i-chat" className="instagram-contact" />
+                <img src={twitter} alt="t-chat" className="twitter-contact" />
+                <img src={gmail} alt="g-mail" className="gmail-contact" />
+                <img src={whatsapp} alt="w-chat" className="whatsapp-contact" />
+                <img src={pinterest} alt="p-info" className="pinterest-contact" />
             </div>
         </div>
     )

@@ -5,7 +5,7 @@
 }
 
 
-.best-movies{
+.best-movies{ 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,21 +14,67 @@
     justify-content: space-around;
 } 
 
-.best-movies img{
+.best-movie-card .best-movies img{
     height:300px;
     width: 200px;  
     box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
 } 
 
+.best-movie-card .title-container{
+    width: 260px;
+    margin: 10px;
+}
+
+.best-movie-card .movie-card-title{
+    font-size: 15px;
+}
+
+.best-movie-card .rating-star {
+    margin-top: 15px;
+}
+
+.best-movie-card .movie-card-imdb-Rating{
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.best-movie-card .movie-card-img {
+    width: 260px;
+    height: 350px;
+    border-radius: 5px;
+    margin-left: 13px;
+}
+
+.rated-movie {
+    font-size: 35px;
+    color:#233f5f;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 2px 2px 3px gray;
+}
+
 .top-rated-movies {
+    height: 800px;
     margin: 20px;
 } 
-.top-rated-movies img{
-    width: 400px;
-    height: 600px;
-    box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
-   
-} 
+
+.rated-movie-card .title-container{
+    margin-left: 20px;
+    width: 350px;
+}
+
+.rated-movie-card .movie-card-title {
+    margin-left: 25px;
+    font-size: 25px;
+}
+
+.rated-movie-card .rating-star{
+    margin-top: 40px;
+}
+
+.rated-movie-card .movie-card-imdb-Rating{
+    margin-top: 55px;
+}
 
 .rated-movie {
     text-align: center;
@@ -39,8 +85,15 @@
     text-shadow: 2px 2px 3px grey;
 }
 
+.rated-movie-card .movie-card-img{
+    border-radius: 5px;
+    width: 350px;
+    height: 550px;
+    margin: 20px;
+    box-shadow: 0px 0px 108px -6px rgba(0,0,0,1);
+} 
+
 img.rating-star {
     height: 20px;
-    width: 20px;
-    
+    width: 20px;  
 }

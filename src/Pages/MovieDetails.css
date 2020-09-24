@@ -3,7 +3,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: chartreuse; */
     margin: 10px;
 }
 
@@ -13,7 +12,6 @@
 
 .page-title-container{
     display: flex;
-    /* background-color: chocolate; */
     margin: 20px;
     font-size: 30px;
     height: 70px;
@@ -30,7 +28,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 600px;
     margin-top: 0px;
-    /* background-color: crimson; */
     width: 360px;
     height: 70px;
 }
@@ -38,8 +35,7 @@
 .page-body-container {
     display: flex;
     flex-direction: row;
-    height: 80%;
-    background-color: darkmagenta;
+    height: 90%;
     margin: 20px;
 }
 
@@ -47,7 +43,6 @@
     display: flex;
     flex-direction: column;
     height: 560px;
-    /* background-color: maroon; */
     margin: 10px;
 }
 
@@ -58,7 +53,6 @@
 
 
 .movie-details-edit-button{
-    /* background-color: honeydew; */
     margin: 1px;
     width: 60px;
     border-radius: 5px;
@@ -72,15 +66,13 @@
 }
 
 .MovieInformationContainer{
-    /* overflow: scroll; */
     display: flex;
     flex-direction: column;
     margin-left: 30px;
     margin-top: 50px;
     width: 70%;
-    height: 600px;
+    height: 500px;
     margin: 20px;
-    background-color: darkslategrey;
 }
 
 .title-container,
@@ -100,28 +92,35 @@
     margin-top: 3px;
     margin-left: 5px;
     margin-right: 5px;
-    /* background-color: deepskyblue; */
+}
+
+.title-container {
+    margin-left: 94px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.imageURL-container{
+    width: 450px;
 }
 
 .MovieInformationContainer-label{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 10px;
     margin-top: 2px;
     margin-bottom: 2px;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    background-color: firebrick;
 }
 
 .title-MovieInformationContainer-label {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: green;
 }
 
 .MovieInformationContainer-input {
@@ -131,18 +130,14 @@
 .show {
     display: flex;
     flex-direction: row;
-    /* justify-content:flex-start; */
     align-items: center;
     height: 35px;
     width: 85%;
     font-size: 15px;
-    background-color: yellow
 
 }
 .MovieInformationContainer-label .show {
-    background-color:blue;
     width: 300px;
-
     margin: 2px;
     height: 20px;
 }
@@ -157,7 +152,6 @@
     display: flex;
     justify-content: flex-end;
     height: 30px;
-    /* background-color: yellow; */
 }
 
 .movie-details-save-button {
@@ -178,8 +172,6 @@
     margin-left: 100px;
     margin-top: 30px;
     margin-bottom: 32px;
-    background-color: black;
-
 }
 
 .poster-img{

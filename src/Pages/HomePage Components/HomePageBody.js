@@ -66,6 +66,7 @@ componentDidMount(){
                 <h2 className="rated-movie">TOP RATED MOVIES</h2>
                 
                 <MovieCard 
+                    className="rated-movie-card"
                     id={this.state.TopRatedMovie._id}
                     Title={this.state.TopRatedMovie.Title}
                     imdbRating={this.state.TopRatedMovie.imdbRating}
@@ -78,6 +79,7 @@ componentDidMount(){
               {this.state.BestRatedMovies.map((element, index)=>(
                 
                   <MovieCard 
+                    className="best-movie-card"
                     id={element._id}
                     key={index}
                     Title={element.Title}
