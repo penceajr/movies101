@@ -121,37 +121,39 @@ handleSaveButton = () => {
 handleRenderingButtons = () => {
     if(!this.state.EditButtonState){
       return (
-      <div>
-      <button onClick={this.handleEditButton}>Edit</button>
-      <Link to="/">
-      <button onClick={this.handleDeleteButton}>Delete</button>
-      </Link>
+      <div className="movie-details-button-container">
+            <button className= "movie-details-edit-button"onClick={this.handleEditButton}>Edit</button>
+            <Link to="/">
+            <button className="movie-details-delete-button"onClick={this.handleDeleteButton}>Delete</button>
+            </Link>
       </div>
       )
     } else{
        return (
-       <div>
-       <button onClick={this.handleSaveButton}>Save</button>
-       <button onClick={this.handleCancelButton}>Cancel</button>
+       <div className="movie-details-button-edit-container">
+            <button className="movie-details-save-button"onClick={this.handleSaveButton}>Save</button>
+            <button className="movie-details-cancel-button" onClick={this.handleCancelButton}>Cancel</button>
        </div>
        )
     } 
 }
-
+ 
     render(){
         
-       return ( 
+       return (  
         <div className="MovieDetailsPage">
             <div className="page-title-container">
                 <h2 className="title">Movie details:</h2>
             </div>
             <div className="page-body-container">
-                <div className="Poster-Container">
-                    <img src={this.state.MovieInformation.Poster} alt="poster" className="poster-img"></img>
+                <div className="movie-details-poster-button-container">
+                    <div className="Poster-Container">
+                        <img src={this.state.MovieInformation.Poster} alt="poster" className="poster-img"></img>
+                    </div>
+                    <div className="edit-and-delete-buttons">
+                        {this.renderEditStateIfUserLoggedIn()}
+                    </div>
                 </div>
-                <div className="edit-and-delete-buttons">
-                     {this.renderEditStateIfUserLoggedIn()}
-                 </div>
                 <div className="MovieInformationContainer">
                     
                     <div className="title-container">
@@ -181,7 +183,7 @@ handleRenderingButtons = () => {
                         <p className="MovieInformationContainer-label">Released: {(this.state.UserState ? "" : this.state.MovieInformation.Released)}
                              <input className={"MovieInformationContainer-input"+(this.state.UserState ? " show" : ' hidden')} onChange={this.handleEditReleased}>
                             </input>
-                        </p>
+                        </p> 
                     </div>
 
                     <div className="runtime-container">

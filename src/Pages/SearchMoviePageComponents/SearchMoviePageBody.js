@@ -126,130 +126,140 @@ createPaginationElements = () =>{
 }   
 
 
-    render() {
+    render() { 
        
 
     return ( 
         <div className="SearchMoviePageBody">
-            <h2>Search a movie by:</h2>
-            <div className="searchPage-Inputs-Container">
-                <InputBar 
-                label="Title"
-                type="text"
-                placeholder="Movie Title"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleTitle}
-                />
+            <div className="search-movie-container">
+                <h2 className="search-movie-title">Search a movie by:</h2>
+                <div className="searchPage-Inputs-Container">
+                    <InputBar 
+                    label="Title"
+                    type="text"
+                    placeholder="Movie Title"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleTitle}
+                    />
 
-                <InputBar 
-                label="Year" 
-                type="text" 
-                placeholder="Movie Year"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleYear}
-                />
+                    <InputBar 
+                    label="Year" 
+                    type="text" 
+                    placeholder="Movie Year"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleYear}
+                    />
                 
-                <InputBar
-                label="Genre" 
-                type="text" 
-                placeholder="Genre"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleGenre}
-                 />
+                    <InputBar
+                    label="Genre" 
+                    type="text" 
+                    placeholder="Genre"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleGenre}
+                    />
                 
-                <InputBar 
-                label="Country" 
-                type="text" 
-                placeholder="Country"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleCountry}
-                />
+                    <InputBar 
+                    label="Country" 
+                    type="text" 
+                    placeholder="Country"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleCountry}
+                    />
                 
-                <InputBar 
-                label="Language" 
-                type="text" 
-                placeholder="Language"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleLanguage}
-                />
+                    <InputBar 
+                    label="Language" 
+                    type="text" 
+                    placeholder="Language"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleLanguage}
+                    />
                 
-                <InputBar
-                label="IMDb Rating" 
-                type="text" 
-                placeholder="IMDb Rating"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleimdbRating} 
-                />
+                    <InputBar
+                    label="IMDb Rating" 
+                    type="text" 
+                    placeholder="IMDb Rating"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleimdbRating} 
+                    />
                 
-                <InputBar 
-                label="Runtime" 
-                type="text" 
-                placeholder="Runtime"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleRuntime}
-                />
+                    <InputBar 
+                    label="Runtime" 
+                    type="text" 
+                    placeholder="Runtime"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleRuntime}
+                    />
                 
-                <InputBar 
-                label="IMDb Votes" 
-                type="text" 
-                placeholder="IMDb Votes"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleimdbVotes}
-                />
+                    <InputBar 
+                    label="IMDb Votes" 
+                    type="text" 
+                    placeholder="IMDb Votes"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleimdbVotes}
+                    />
                 
-                <InputBar
-                label="Type" 
-                type="text" 
-                placeholder="Type"
-                LabelcssClass="search-label" 
-                InputcssClass="search-input" 
-                value={this.state.value}
-                onChangeValue={this.handleType}
-                />
+                    <InputBar
+                    label="Type" 
+                    type="text" 
+                    placeholder="Type"
+                    LabelcssClass="search-label" 
+                    InputcssClass="search-input" 
+                    value={this.state.value}
+                    onChangeValue={this.handleType}
+                    />
 
+                </div>
             </div>
+
             <div className="button-container">
-            <Button 
-            cssClass="searchMoviePage-button" 
-            label="Search"
-            onSubmit={this.checkIfEmpyValues}
-            />
+                <Button 
+                cssClass="searchMoviePage-button" 
+                label="Search"
+                onSubmit={this.checkIfEmpyValues}
+                />
             </div>
 
             
+            <div className="found-movie-container-body">
+                <h2 className="movie-found-title">Movie found:</h2>
             
-            <h2>Movie found:</h2>
-            
-           <div className="Movie-Found-Container">
-            {this.state.FoundMovie.map((element, index) => (
-                <MovieCard 
-                    className="search-movie-card"
-                    id={element._id}
-                    key={index}
-                    Title={element.Title}
-                    imdbRating={element.imdbRating}
-                    Poster={element.Poster}
-                />    
-            ))
-            }
-            </div>
-                {this.createPaginationElements()}
+                <div className="Movie-Found-Container">
+                    <div className="search-movie-card-container">
+                        {this.state.FoundMovie.map((element, index) => (
+                            <MovieCard 
+                                className="search-movie-card"
+                                id={element._id}
+                                key={index}
+                                Title={element.Title}
+                                imdbRating={element.imdbRating}
+                                Poster={element.Poster}
+                            />    
+                            ))
+                        }
+                    </div>
+
+                    <div className="movie-found-pagination-container">
+                    {this.createPaginationElements()}
+                    </div>
+                 </div>
+
+        </div>
         </div>
         
     );
