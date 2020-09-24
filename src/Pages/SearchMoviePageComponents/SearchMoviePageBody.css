@@ -14,7 +14,7 @@
 .searchPage-Inputs-Container{
     display: flex;
     flex-wrap: wrap;
-    /* background-color: red; */
+    
     margin: 5px;
 
 }
@@ -63,24 +63,22 @@
 }
 
 .found-movie-container-body{
-    background-color: black;
+    
     display: flex;
     flex-direction: column;
     margin: 30px;
 }
 
 .Movie-Found-Container{
-    background-color:red;
+    
     display: flex;
     flex-direction: column;
     margin: 10px;
-    /* flex-wrap: wrap; */
-    /* width: 100%; */
     
 }
 
 .search-movie-card-container{
-    background-color: hotpink;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -89,40 +87,40 @@
 }
 
 .search-movie-card{
-    background-color: slateblue;
+    
     width: 250px;
     height: 400px;
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    
     justify-content: center;
     margin: 15px;
 }
 
 .search-movie-card .title-container{
-    background-color: yellow;
+    
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-end; */
+    
     margin: 5px;
     width: 230px;
     
     justify-content: center;
-    /* align-items: center; */
+    
 }
 
 .search-movie-card .movie-card-title{
-    background-color: white;
+   
     font-size: 14px;
     font-weight: 900;
     margin: 5px;
-    /*  */
+    
 
     height: 60px;
 }
 
 .search-movie-card .movie-card-img{
-    background-color: seagreen;
+    
     margin: 4px;
     
     height: 300px;
@@ -132,18 +130,18 @@
 
 .search-movie-card .rating-star {
     margin-top: 40px;
-    background-color: blue;
+    
 
 }
 
  .search-movie-card .movie-card-imdb-Rating{
     margin-top: 50px;
-     background-color:green;
+    
 
  }
 
  .movie-found-pagination-container {
-     background-color: teal;
+     
      width: 100%;
      height: 100px;
      margin: 0px;
